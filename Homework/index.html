@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web API Code Quiz</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src=script.js></script>
+</head>
+<body >
+    <nav> 
+        <nav class="navbar navbar-expand-md">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav mr-auto">
+                        <!-- link to High Scores -->
+                        <a class="nav-item nav-link active" href="highScore.html">High Scores</a>
+                    </div>
+                </div>
+                <div class="timerDiv">
+                    <p>Time: <span id="timer"></span></p>
+                </div>
+            </div>
+        </nav> 
+    </nav> 
+    <div class="wrapper">     
+        <div id="quizIntro" class="introDiv">         
+            <div id="firstSection">
+                <h1>Coding Quiz Challange</h1>
+                <p>Get ready to take a coding test as soon as you press start </p>
+                <p>You have 60 seconds to finish the test. keep in mind that you will lose ten seconds for every answer you get wrong</p>
+                <!-- The first question appears on the screen after the following button is clicked; the contents of the previous div are hidden from the page. -->
+               <button id="startQuiz" class="button">Start Quiz</button>
+            </div>
+
+            <div id="secondSection" class="startHidden"> 
+                <h3 id="question"></h3>
+                <button id ="option1" class="clickQuiz"></button>
+                <button id ="option2" class="clickQuiz"></button>
+                <button id ="option3" class="clickQuiz"></button>
+                <button id ="option4" class="clickQuiz"></button>
+                <p id="seeSolution"></p>
+            </div>
+            <div id="thirdSection" class="startHidden">
+                <h3>GAME OVER! <br></br> You ran out of time!</h3>
+                <!-- This button contains a link to the instruction page. -->
+                <a href="index.html" class="button px-2 py-1">Go Back</a>     
+            </div>
+            <!-- If the user DOES answer all of the questions before the timer runs out, the contents of this div get displayed. -->
+            <div id="fourthSection" class="startHidden">
+                <h3 id="quizComplete"></h3>
+                <h4 id="playerScore"></h4>
+                <p>Enter your initials:</p>
+                <form>
+                    <input type="text" id="userInitials">
+                    <!-- Clicking this button submits the user's initials and high score to the High Score page. -->
+                    <a href="highScore.html" id="submit" class="button px-2 py-1">Submit</a>
+                </form>
+            </div>
+        </div>            
+    </div>
+<!--     
+    <div class="container-lg">
+        <div  id="question-container" class="hide">
+            <div id="question">
+                <h1>Question</h1>
+            </div>
+            <div id="answer-buttons" class="btn-grid">
+                <button type="button" class="btn btn-primary btn-lg btn-block">Answer 1</button>
+                <button type="button" class="btn btn-primary btn-lg btn-block">Answer 2</button>
+                <button type="button" class="btn btn-primary btn-lg btn-block">Answer 3</button>
+                <button type="button" class="btn btn-primary btn-lg btn-block">Answer 4</button>
+             </div>
+        </div>
+        <div class="controls">
+            <button id="startbtn" class="start-btn btn">Start</button>
+            <button id="next-btn" class="next-btn btn hide">Next</button>
+        </div>
+    </div> -->
+</body>
+</html>
